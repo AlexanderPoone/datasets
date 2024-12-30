@@ -1,0 +1,18 @@
+(Japan, Outperforming) - Positive
+(EM and China, Lagging) - Negative
+(India, Outperforming) - Positive
+(Saudi Arabia, Outperforming) - Positive
+(Industrials in Japan, Outperforming) - Positive
+(TOPIX, Gaining) - Positive
+(Nominal GDP growth, Positive) - Positive
+(Earnings revisions, Positive) - Positive
+(ROE, Rising) - Positive
+(MSCI EM, Weak) - Negative
+(Turkey, Outperforming) - Positive
+(Egypt, Outperforming) - Positive
+(Colombia, Outperforming) - Positive
+(Korea, Underperforming) - Negative
+(Chile, Underperforming) - Negative
+(Hong Kong, Underperforming) - Negative
+(Quality, Overweight) - Positive
+(Value and Growth in EM, Neutral) - Neutral

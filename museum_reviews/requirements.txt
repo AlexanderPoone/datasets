@@ -1,0 +1,8 @@
+ethnicseer
+gender_extractor
+matplotlib
+openxlsx
+pandas
+seaborn
+selenium
+wordcloud

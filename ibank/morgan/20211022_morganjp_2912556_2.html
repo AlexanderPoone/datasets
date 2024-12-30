@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+	"http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+ table.main {}
+ tr.row {}
+ td.cell {}
+ div.block {}
+ div.paragraph {}
+ .font0 { font:6pt Arial, sans-serif; }
+ .font1 { font:10pt Arial, sans-serif; }
+ .font2 { font:16pt Arial, sans-serif; }
+ .font3 { font:10pt Times New Roman, serif; }
+ .font4 { font:15pt Times New Roman, serif; }
+
+</style>
+</head>
+<body>
+<p><span class="font4">J.P. Morgan</span></p>
+<p><span class="font0" style="font-weight:bold;">Berow ne Hlavaty</span></p>
+<p><span class="font0" style="font-weight:bold;">(61 -2) 9003-8602</span></p>
+<p><span class="font0" style="font-weight:bold;">be rowne. d.h la vaty@jpm organ .com</span></p>
+<p><span class="font0" style="font-weight:bold;">Global Quantitative &amp;&nbsp;Derivatives Strategy 22 October 2021</span></p>
+<p><span class="font2">Example Use-Cases for NLP</span></p>
+<p><span class="font3">In this report, we explore some example use-cases for Natural Language Processing (NLP) using some of our State of the Art (SotA) tools for sentiment scoring and theme identification.</span></p>
+<ul style="list-style:none;"><li>
+<p><span class="font3">• &nbsp;&nbsp;&nbsp;SmartBuzz Sentiment Scores using MPNET described in the </span><span class="font3" style="text-decoration:underline;">Muppet Wars</span><span class="font3"> paper.</span></p></li>
+<li>
+<p><span class="font3">• &nbsp;&nbsp;&nbsp;Fi na nc ia 1 ly Re levant te rms i nsp ired from the </span><span class="font3" style="text-decoration:underline;">Smail Buzz 2.0</span><span class="font3"> p ape r.</span></p></li></ul>
+<p><span class="font3">In this report we investigate both these tools to see how they can be applied to different text sources, identifying some biases and practical issues that need to be addressed when building a quantitative investment signal from unstructured text data.</span></p>
+<p><a name="bookmark0"></a><span class="font1" style="font-weight:bold;"><a name="bookmark1"></a>Sentiment Models</span></p>
+<p><span class="font3">One of the simplest sentiment models are based on the Harvard Dictionary or Loughran-McDonald dictionary approach (available in NLTK and VADER for example). These models had a -1 to +1 sentiment score for each word, and it is very quick to calculate an average sentiment for any sentence using these approaches.</span></p>
+<p><span class="font3">Another approach, similar to the dictionaries mentioned above, that we have used is calculating a weighted term sentiment. With a million J.P. Morgan Analyst reports to draw on, in prior research we took the last 5 years (over 250k) with single stock overweight, neutral and underweight ratings (75k). In the 2017 paper ‘‘</span><span class="font3" style="text-decoration:underline;">Extracting Sentiment from News: Machine Learning in Big Data for the Classification of News Sentiment for Equities</span><span class="font3">'’ we used these ratings to assign a polarity score to each term, positive for overweight mentions and negative for underweight and neutral.</span></p>
+<p><span class="font3">However, these methods are flawed, as reported by </span><span class="font3" style="text-decoration:underline;">Loughran and McDonald</span><span class="font3">. In a large sample of 10-Ks during 1994 to 2008, almost three-fourths of the words identified as negative by the widely used Harvard Dictionary are words typically not considered negative in financial contexts.</span></p>
+<p><span class="font3">Thankfully, sentiment has progressed a lot from the old days of look-up dictionaries. This is the primary reason we compared the performance of 17 state of the art Natural Language Processing models in our prior report: ‘‘</span><span class="font3" style="text-decoration:underline;">Assessing a range of NLP Transformer Models such as BERT, Electra. Funnel. GPT2. MPNetand variants</span><span class="font3">”</span></p>
+<p><span class="font3">These SotA NLP models based on ‘Transformers’ embed a rich and deep understanding of language by reading billions of text documents before being finetuned for our financial sentiment problem. Based on the results from that paper we have settled on the MPNet model which was ‘fine-tuned’ using the J.P. Morgan Headline Sentiment dataset consists of 4,298 news headlines which have been manually assigned a sentiment label drawn from: POS, NEG, NEUT, or MIXED.</span></p>
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<div>
+</div><br clear="all">
+<p><span class="font0" style="font-weight:bold;">2</span></p>
+</body>
+</html>

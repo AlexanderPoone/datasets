@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+	"http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+ table.main {}
+ tr.row {}
+ td.cell {}
+ div.block {}
+ div.paragraph {}
+ .font0 { font:6pt Arial, sans-serif; }
+ .font1 { font:8pt Arial, sans-serif; }
+ .font2 { font:10pt Arial, sans-serif; }
+ .font3 { font:16pt Arial, sans-serif; }
+ .font4 { font:8pt Courier New, monospace; }
+ .font5 { font:10pt Times New Roman, serif; }
+ .font6 { font:13pt Times New Roman, serif; }
+ .font7 { font:15pt Times New Roman, serif; }
+
+</style>
+</head>
+<body>
+<p><span class="font7">J.P. Morgan</span></p>
+<p><span class="font0" style="font-weight:bold;">Berow ne Hlavaty</span></p>
+<p><span class="font0" style="font-weight:bold;">(61 -2) 9003-8602</span></p>
+<p><span class="font0" style="font-weight:bold;">be rowne. d.h la vaty@jpm organ .com</span></p>
+<p><span class="font0" style="font-weight:bold;">Global Quantitative &amp;&nbsp;Derivatives Strategy 17 January 2022</span></p>
+<p><span class="font3">NLP for Thematic Investing</span></p>
+<p><span class="font5">We have written extensively on thematic investing using our SmartBuzz framework. For example, see </span><span class="font5" style="text-decoration:underline;">SmartBuzz</span><span class="font5"> notes on </span><span class="font5" style="text-decoration:underline;">Earnings</span><span class="font5">, </span><span class="font5" style="text-decoration:underline;">News</span><span class="font5">, and </span><span class="font5" style="text-decoration:underline;">Sentiment</span><span class="font5">. There are essentially two parts to most thematic investment tasks: (1) identifying the theme, and (2) assigning sentiment. We describe both of these tasks in detail.</span></p>
+<p><a name="bookmark0"></a><span class="font2" style="font-weight:bold;"><a name="bookmark1"></a>Basic Sentiment Analysis</span></p>
+<p><span class="font5">We note that recent models such as the transformers package from HuggingFace makes sentiment analysis possible with just </span><span class="font5" style="text-decoration:underline;">3 lines of code</span><span class="font5">, as shown below.</span></p>
+<ul style="list-style:none;"><li>
+<p><span class="font1">Figure 1: &nbsp;&nbsp;&nbsp;Sample Code to Classify Sentiment </span><span class="font4">from transformers import pipeline classifier = pipeline(&quot;text-classification&quot;) classifier (&quot;The advances in NLP over the past decade are amazing&quot;) »» [{'label': 'POSITIVE', 'score': 0.9998743534088135}]</span></p></li></ul>
+<p><span class="font0">Source: HuggingFace, J.P. Morgan.</span></p>
+<p><span class="font5">However, a problem with standard sentiment analysis is that dense writing often packs more than one topic into a sentence as shown in the example below.</span></p>
+<ul style="list-style:none;"><li>
+<p><span class="font1">Figure 2: &nbsp;&nbsp;&nbsp;Example of dense sentence with multiple topics mentioned:</span></p></li></ul>
+<p><span class="font6" style="font-style:italic;font-variant:small-caps;">“In the Corporate &amp;&nbsp;Investment Bank, Global</span><span class="font5" style="font-weight:bold;font-style:italic;"> IB </span><span class="font6" style="font-style:italic;font-variant:small-caps;">fees h ere up</span><span class="font5" style="font-weight:bold;font-style:italic;"> 52% </span><span class="font6" style="font-style:italic;font-variant:small-caps;">driven by a </span><span class="font5" style="font-weight:bold;font-style:italic;">SURGE IN M&amp;A ACTIVITY AND OUR STRONG PERFORMANCE IN IPOS, MARKETS REVENUE HAS VERY STRONG OVERALL AND DOWN JUST 5%</span></p>
+<p><span class="font5" style="font-weight:bold;font-style:italic;">COMPARED TO A THIRD QUARTER RECORD LAST </span><span class="font6" style="font-style:italic;font-variant:small-caps;">year, as Continued normaliza tion in Fixed Income has partially offset by a strong </span><span class="font5" style="font-weight:bold;font-style:italic;">PERFORMANCE IN EQUITIES. ”</span></p>
+<p><span class="font0">Source: J.P. Morgan 3021 </span><span class="font0" style="text-decoration:underline;">announce men!</span></p>
+<div>
+<p><span class="font0" style="font-weight:bold;">n-gram</span></p>
+<p><span class="font0" style="font-weight:bold;">In the fields of computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sequence of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. An n-gram of size 1 is referred to as a &quot;unigram&quot;; size 2 is a &quot;bigram&quot;; size 3 is a &quot;trigram&quot;. Larger sizes are sometimes referred to by the value of n, e.g., &quot;four-gram&quot;, &quot;five-gram&quot;, and so on.</span></p>
+<p><span class="font0" style="font-weight:bold;">Source: </span><span class="font0" style="font-weight:bold;text-decoration:underline;">www.definitions. net</span></p>
+</div><br clear="all">
+<p><span class="font5">In such a situation a sentiment score of “NEUTRAL” (or “MIXED” if using our </span><span class="font5" style="text-decoration:underline;">Sentiment</span><span class="font5"> training datasets) will be returned, but clearly </span><span class="font5" style="font-weight:bold;font-style:italic;">different aspects of the sentence have different sentiment.</span></p>
+<p><span class="font5">One approach we have explored is to identify the target word, then measure the sentiment of the surrounding n-gram words. While this technique is relatively computationally cheap, it ignores more complex sentence structure.</span></p>
+<p><span class="font5">Another approach is to split sentences by punctuation, which could work for simple language sentences but could miss some negation and other complex structures.</span></p>
+<p><span class="font5">A more complex approach would be to split the text into smaller independent chunks, sometimes called spans. These could include just a single sentence or perhaps use a dependency graph to parse the sentence and focus on the part of the graph that relates to the aspect of concern. Finer (shorter) spans could be created by splitting at commas as well as periods. As a result, each [sub-] sentence could be processed</span></p>
+<p><span class="font0" style="font-weight:bold;">2</span></p>
+</body>
+</html>
