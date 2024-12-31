@@ -1,8 +1,6 @@
 '''
 Keyword filter. Comments: many are double-barreled. Filter at the sentence level. 
 Full join two different sources.
-Reverse geocode discovery: Supermajority of Londoners, plus small towns and rural areas 
-Birmingham Manchester 
 Flaneur lifestyle. US Australia, int’l fail. 
 '''
 
